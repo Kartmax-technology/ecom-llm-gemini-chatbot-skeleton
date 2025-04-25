@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Store Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <i class="fas fa-cog"></i>
+        Max AI
+    </div>
+    <div class="header-actions">
+        <button class="filter-btn" id="filterBtn"><i class="fas fa-sliders-h"></i> Filter</button>
+    </div>
+</header>
+
+<div class="container">
+    <div class="content">
+        <!-- Chat Section (50%) -->
+        <section class="chat-section">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="avatar">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <span>Personal Shopping Assistant</span>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Sample messages for demonstration -->
+                    <div class="message assistant">
+                        👋 Hi there! I'm your personal shopping assistant. How can I help you find the perfect product today?
+                    </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" id="userInput" placeholder="Ask about shoes, sizes, brands..." autocomplete="off">
+                    <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <button class="send-button" id="sendButton">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section (50%) -->
+        <section class="products-section">
+            <div class="products-header">
+                <h2>Recommended Products <span class="count-badge" id="productCount">0</span></h2>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here dynamically -->
+                <div class="empty-state">
+                    <i class="fas fa-search"></i>
+                    <h3>Ask About Anything</h3>
+                    <p>Chat with our assistant to see product recommendations</p>
+                    <div class="suggestion-chips">
+                        <div class="suggestion-chip" onclick="suggestQuery('Show Mont Blanc Pens')">
+                            <i class="fas fa-male"></i> Mont Blanc Pens
+                        </div>
+                        <div class="suggestion-chip" onclick="suggestQuery('Show Sheaffer Pens')">
+                            <i class="fas fa-female"></i> Sheaffer Pens
+                        </div>
+                        <div class="suggestion-chip" onclick="suggestQuery('Pens under 10000 INR')">
+                            <i class="fas fa-tags"></i> Under ₹10000
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- Filter Panel -->
+<div class="filter-panel" id="filterPanel">
+    <div class="filter-panel-header">
+        <h3>Filter Products</h3>
+        <button class="close-filter" id="closeFilter"><i class="fas fa-times"></i></button>
+    </div>
+
+    <div class="filter-group">
+        <h4>Gender</h4>
+        <div class="filter-options">
+            <div class="filter-option" data-filter="gender" data-value="male">Men</div>
+            <div class="filter-option" data-filter="gender" data-value="female">Women</div>
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <h4>Price Range</h4>
+        <div class="price-range">
+            <input type="number" id="minPrice" placeholder="Min" min="0">
+            <span>to</span>
+            <input type="number" id="maxPrice" placeholder="Max" min="0">
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <h4>Color</h4>
+        <div class="filter-options" id="colorFilters">
+            <!-- Will be populated dynamically -->
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <h4>Brands</h4>
+        <div class="filter-options" id="brandFilters">
+            <!-- Will be populated dynamically -->
+        </div>
+    </div>
+
+    <button class="apply-filters" id="applyFilters">Apply Filters</button>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,797 @@
+:root {
+    --primary-color: #6153f1;
+    --primary-light: #7967ff;
+    --secondary-color: #f8f9fa;
+    --accent-color: #4b38e9;
+    --text-color: #212529;
+    --text-light: #6c757d;
+    --bg-color: #f8f9fb;
+    --card-bg: #ffffff;
+    --light-gray: #e9ecef;
+    --border-color: #dee2e6;
+    --success-color: #38d79f;
+    --danger-color: #ff4e6a;
+    --discount-color: #ff513a;
+    --border-radius: 12px;
+    --box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+/* Header */
+header {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 15px 20px;
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.logo i {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filter-btn:hover {
+    background-color: var(--light-gray);
+}
+
+/* Main Content */
+.content {
+    display: flex;
+    width: 100%;
+    margin-top: 60px; /* Header height */
+}
+
+/* Chat Container */
+.chat-section {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    height: calc(100vh - 100px);
+}
+
+.chat-header {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 15px 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.chat-header .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    color: white;
+    font-size: 16px;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 16px;
+    position: relative;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: var(--primary-color);
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.message.assistant {
+    align-self: flex-start;
+    background-color: var(--secondary-color);
+    border-bottom-left-radius: 4px;
+}
+
+.chat-input-container {
+    padding: 15px 20px;
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition);
+    background-color: var(--secondary-color);
+}
+
+.chat-input:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(107, 83, 241, 0.15);
+}
+
+.send-button {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.send-button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.typing-indicator {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.typing-indicator span {
+    height: 8px;
+    width: 8px;
+    background-color: var(--text-light);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 3px;
+    animation: typing 1.4s infinite both;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+/* Products Section */
+.products-section {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.products-header h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.count-badge {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 20px;
+    padding: 2px 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    overflow-y: auto;
+    height: calc(100vh - 160px);
+    padding-right: 10px;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.gender-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--discount-color);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.product-info {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-brand {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.product-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.current-price {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.original-price {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    text-decoration: line-through;
+}
+
+.product-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 10px;
+}
+
+.product-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.availability {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.stock-status {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    gap: 4px;
+}
+
+.stock-status.in-stock {
+    color: var(--success-color);
+}
+
+.stock-status.out-of-stock {
+    color: var(--danger-color);
+}
+
+.product-action {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.view-button {
+    flex: 3;
+    padding: 8px 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.cart-button {
+    flex: 1;
+    padding: 8px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-button:hover {
+    background-color: var(--accent-color);
+}
+
+.cart-button:hover {
+    background-color: var(--light-gray);
+}
+
+.size-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.size-chip {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+}
+
+/* Empty state */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+    color: var(--text-light);
+    grid-column: 1 / -1;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    color: var(--light-gray);
+    margin-bottom: 15px;
+}
+
+.empty-state h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.empty-state p {
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.suggestion-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.suggestion-chip {
+    background-color: var(--secondary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.suggestion-chip:hover {
+    background-color: var(--light-gray);
+    transform: scale(1.05);
+}
+
+.suggestion-chip i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Scrollbars */
+.chat-messages::-webkit-scrollbar,
+.products-grid::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb,
+.products-grid::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 5px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover,
+.products-grid::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-light);
+}
+
+/* Filter panel */
+.filter-panel {
+    position: fixed;
+    top: 60px;
+    right: -350px;
+    width: 350px;
+    height: calc(100vh - 60px);
+    background-color: var(--card-bg);
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: var(--transition);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.filter-panel.show {
+    right: 0;
+}
+
+.filter-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.filter-panel-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.close-filter {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+.close-filter:hover {
+    color: var(--text-color);
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h4 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-option {
+    padding: 5px 12px;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-option:hover,
+.filter-option.active {
+    background-color: var(--primary-light);
+    color: white;
+}
+
+.price-range {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.price-range input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.apply-filters {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 20px;
+}
+
+.apply-filters:hover {
+    background-color: var(--accent-color);
+}
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .chat-section, .products-section {
+        width: 100%;
+    }
+
+    .chat-section {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .chat-container {
+        height: 500px;
+    }
+
+    .products-grid {
+        height: auto;
+        max-height: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chat-container {
+        height: 400px;
+    }
+
+    .filter-panel {
+        width: 300px;
+    }
+}
+
+#productsGrid{
+    height: 100%;
+}
+
+/* Update these styles in your styles.css file */
+
+/* Make the chat section sticky */
+.chat-section {
+    width: 50%;
+    position: sticky;
+    top: 60px; /* Same as header height */
+    height: calc(100vh - 60px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+    overflow: hidden; /* Prevent overflow of the container itself */
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    height: 100%; /* Take full height of the sticky container */
+}
+
+/* Make sure the chat messages are scrollable within the fixed container */
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: calc(100vh - 180px); /* Adjust based on header + input area */
+}
+
+/* Allow the products section to scroll */
+.products-section {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Auto height allows content to determine height */
+    min-height: calc(100vh - 60px); /* Minimum height matches the chat section */
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    overflow-y: auto;
+    max-height: none; /* Remove the max-height constraint */
+    padding-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .chat-section, .products-section {
+        width: 100%;
+        position: relative; /* Remove sticky positioning on mobile */
+        height: auto;
+    }
+
+    .chat-section {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .chat-container {
+        height: 500px; /* Fixed height for mobile */
+    }
+
+    .chat-messages {
+        max-height: 400px; /* Adjust for mobile */
+    }
+}

@@ -1,0 +1,49 @@
+name,price,description,category,brand,color,size,material,gender,rating
+Casual Sneakers,1999,Comfortable daily wear sneakers,Casual,StreetStyle,White,9,Canvas,Unisex,4.2
+Formal Shoes,2499,Stylish formal shoes for office wear,Formal,ClassicStep,Black,8,Leather,Men,4.5
+Running Shoes,2999,Breathable shoes for running and fitness,Athletic,SpeedTrack,Blue,10,Mesh,Unisex,4.7
+Hiking Boots,3499,Waterproof boots for trail hiking and outdoor adventures,Outdoor,TrailMaster,Brown,9,Suede,Unisex,4.6
+Slip-On Loafers,1799,Easy to wear comfortable loafers for casual outings,Casual,ComfortWalk,Tan,8,Leather,Men,4.1
+High Heels,2699,Elegant high heels for formal occasions,Formal,GlamStep,Red,7,Synthetic,Women,4.3
+Canvas Slip-Ons,1299,Lightweight casual slip-on shoes for everyday use,Casual,EasyFoot,Gray,8,Canvas,Unisex,3.9
+Basketball Shoes,3299,High-top shoes with ankle support for basketball players,Athletic,CourtKing,Black/Red,11,Synthetic,Men,4.8
+Sandals,999,Open-toe sandals for summer and beach wear,Casual,SummerStep,Brown,9,Leather,Unisex,4.0
+Ballet Flats,1599,Comfortable flat shoes for everyday wear and office use,Casual,ElegantStep,Beige,6,Synthetic,Women,4.2
+Hiking Sandals,1899,Sturdy sandals for light hiking and outdoor activities,Outdoor,TrailMaster,Green,10,Rubber,Unisex,4.3
+Winter Boots,3999,Insulated boots for cold weather and snow,Outdoor,WinterPro,Black,8,Leather,Unisex,4.7
+Skateboarding Shoes,2399,Durable shoes with grip for skateboarding,Athletic,UrbanRide,Navy,9,Suede,Unisex,4.4
+Golf Shoes,4299,Specialized shoes with spikes for golfing,Athletic,GreenMaster,White,10,Leather,Men,4.6
+Work Boots,3799,Safety boots with reinforced toe for construction work,Work,SafeStep,Brown,11,Leather,Men,4.5
+Tennis Shoes,2799,Lightweight shoes with good lateral support for tennis,Athletic,CourtAce,White,9,Synthetic,Unisex,4.3
+Rain Boots,1699,Waterproof rubber boots for rainy weather,Outdoor,RainGuard,Yellow,7,Rubber,Women,4.1
+Dress Pumps,2599,Classic pumps for formal and business attire,Formal,ClassicStep,Black,8,Leather,Women,4.4
+Trail Running Shoes,3599,Rugged running shoes for off-road and trail running,Athletic,TrailRunner,Gray/Orange,10,Mesh,Unisex,4.8
+Oxford Shoes,2899,Classic lace-up formal shoes for business wear,Formal,ClassicStep,Brown,9,Leather,Men,4.6
+Wedge Sandals,1999,Comfortable sandals with wedge heels for casual outings,Casual,SummerStep,Tan,7,Synthetic,Women,4.2
+Minimalist Running Shoes,2499,Barefoot-style running shoes with minimal cushioning,Athletic,NaturalRun,Black,9,Mesh,Unisex,4.0
+Dress Boots,3299,Stylish boots for formal occasions,Formal,UrbanStyle,Black,8,Leather,Men,4.5
+Platform Sandals,2199,Elevated sandals for added height and style,Casual,GlamStep,White,7,Synthetic,Women,4.1
+Cross-Training Shoes,2799,Versatile athletic shoes for various workout activities,Athletic,FitPro,Gray/Blue,10,Synthetic,Unisex,4.6
+Ankle Boots,2499,Stylish boots that reach the ankle for everyday wear,Casual,UrbanStyle,Brown,7,Leather,Women,4.3
+Indoor Soccer Shoes,2399,Flat-soled shoes for indoor soccer and futsal,Athletic,GoalMaster,Blue,9,Synthetic,Unisex,4.4
+Espadrilles,1499,Casual rope-soled canvas shoes for summer,Casual,SummerStep,Beige,8,Canvas,Women,4.0
+Moccasins,1899,Soft leather slip-on shoes for comfort and style,Casual,ComfortWalk,Brown,9,Leather,Men,4.2
+Cycling Shoes,3499,Specialized shoes with cleats for cycling,Athletic,SpeedCycle,Black,10,Synthetic,Unisex,4.7
+Snow Boots,4199,Heavy-duty insulated boots for snow and extreme cold,Outdoor,WinterPro,White,8,Synthetic,Women,4.8
+Boat Shoes,2199,Casual leather shoes with non-slip soles for boating,Casual,NauticalStep,Navy,9,Leather,Men,4.3
+Combat Boots,3799,Military-style boots for rugged wear and durability,Casual,UrbanStyle,Black,10,Leather,Unisex,4.5
+Climbing Shoes,3299,Specialized shoes with sticky rubber for rock climbing,Outdoor,RockMaster,Red,8,Synthetic,Unisex,4.6
+Mary Jane Shoes,1799,Classic shoes with a strap across the instep,Casual,ClassicStep,Black,7,Leather,Women,4.1
+Water Shoes,1299,Quick-drying shoes for water activities and beach,Outdoor,AquaStep,Blue,9,Neoprene,Unisex,3.9
+Clogs,1599,Easy slip-on shoes for comfort and casual wear,Casual,ComfortWalk,Brown,8,Rubber,Unisex,3.8
+Track Spikes,2899,Specialized shoes with spikes for track and field events,Athletic,SpeedTrack,Red/White,10,Synthetic,Unisex,4.7
+Chelsea Boots,2799,Ankle boots with elastic side panels,Casual,UrbanStyle,Brown,9,Leather,Unisex,4.4
+Diabetic Shoes,2999,Specially designed shoes with extra depth for diabetic feet,Medical,HealthStep,Black,9,Leather,Unisex,4.5
+Flip Flops,699,Simple thong sandals for beach and casual wear,Casual,SummerStep,Blue,10,Rubber,Unisex,3.7
+Orthopedic Shoes,3499,Shoes designed to support foot health and correct posture,Medical,HealthStep,Brown,8,Leather,Unisex,4.4
+Gladiator Sandals,1999,Strappy sandals inspired by ancient Roman design,Casual,GlamStep,Tan,7,Synthetic,Women,4.0
+Handball Shoes,2599,Indoor court shoes with grip for handball and squash,Athletic,CourtKing,White/Blue,9,Synthetic,Unisex,4.3
+Wellington Boots,1899,Tall waterproof rubber boots for outdoor work,Outdoor,RainGuard,Green,10,Rubber,Unisex,4.2
+Monk Strap Shoes,2799,Formal shoes with buckle fastening instead of laces,Formal,ClassicStep,Brown,9,Leather,Men,4.5
+Ballet Pointe Shoes,3999,Specialized shoes for ballet dancers,Specialty,DanceStep,Pink,6,Satin,Women,4.7
+Mountaineering Boots,5999,Heavy-duty boots for high-altitude climbing and mountain expeditions,Outdoor,AlpineMaster,Red/Black,10,Leather/Synthetic,Unisex,4.9
